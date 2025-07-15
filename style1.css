@@ -1,0 +1,425 @@
+
+       body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        font-family: Arial, sans-serif;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: "UnifrakturMaguntia", cursive;
+        color: #ffffff;
+      }
+
+     h2 {
+        font-family: 'Saira Extra Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 100%;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      ul.menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      ul.menu li a {
+        font-family: 'Saira Extra Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      ul.menu li a:hover {
+        color: #855bfa;
+      }
+    
+      .hero-background {
+        background-image: url("main.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        color: white;
+      }
+
+      .hero-background::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+      }
+
+      .hero-background > header,
+      .hero-background > main {
+        position: relative;
+        z-index: 1;
+      }
+
+      header {
+        padding: 100px 0 50px;
+        text-align: center;
+      }
+
+      main {
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+
+    
+      .galeria {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 40px 20px;
+      }
+
+      .card {
+        width: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h3 {
+        margin-top: 10px;
+        font-size: 1em;
+        color: #ccc;
+        text-align: center;
+      }
+
+      /* Categorías */
+      .categorias {
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .categorias h3 {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+      }
+
+      .categorias-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .categoria {
+        width: 120px;
+        height: 120px;
+        border-radius: 16px;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .categoria img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      /* Cuestionario */
+      .cuestionario,
+      .rueda-estelar {
+        padding: 60px 20px;
+        background-image: url("constelacion-2.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+      }
+
+      .cuestionario-contenido,
+      .rueda-estelar-contenido {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .cuestionario .texto,
+      .rueda-estelar .texto {
+        max-width: 450px;
+      }
+
+      .cuestionario .texto p,
+      .rueda-estelar p {
+        font-size: 1em;
+        color: #ccc;
+        margin-bottom: 20px;
+      }
+
+      .cuestionario button,
+      .rueda-estelar button,
+      .cartas-magicas button,
+      .btn-centro {
+        background-color: #6c2bd9;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 1em;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .cuestionario button:hover,
+      .rueda-estelar button:hover,
+      .cartas-magicas button:hover,
+      .btn-centro:hover {
+        background-color: #5220a5;
+      }
+
+      .cuestionario .imagen img {
+        max-width: 217px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .imagenes-cartas {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+      }
+
+      .btn-centro {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 12px 24px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .btn-centro:hover {
+        background-color: #0056b3;
+      }
+
+      .cartas-magicas {
+        padding: 60px 20px;
+      }
+
+      .cartas-magicas .contenido {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: left;
+      }
+      .cartas-magicas .imagenes-cartas {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+      }
+      .imagenes-cartas img {
+        width: 150px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 25px;
+      }
+
+      .cartas-magicas .texto {
+        text-align: left;
+      }
+
+      .cartas-magicas h4 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+      }
+
+      .cartas-magicas p {
+        font-size: 1em;
+        color: #444;
+        margin-bottom: 20px;
+        max-width: 600px;
+      }
+
+      .cartas-magicas button {
+        background-color: #6c2bd9;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 1em;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .cartas-magicas button:hover {
+        background-color: #0056b3;
+      }
+    
+      /* rueda-estelar */
+      /*.cuestionario {
+      }*/
+      .rueda-estelar {
+        padding: 60px 20px;
+        background-image: url("constelacion-2.png");
+        background-size: cover; /* que cubra todo el área */
+        background-position: center; /* centrada */
+        background-repeat: no-repeat; /* que no se repita */
+        color: white; /* texto claro para contraste */
+      }
+
+      .rueda-estelar-contenido {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .rueda-estelar .texto {
+        max-width: 450px;
+      }
+
+      .rueda-estelar h4 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+      }
+
+      .rueda-estelar p {
+        font-size: 1em;
+        color: #444;
+        margin-bottom: 20px;
+      }
+
+      .rueda-estelar button {
+        background-color: #6c2bd9;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 1em;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .rueda-estelar button:hover {
+        background-color: #5220a5;
+      }
+
+      .rueda-estelar .imagen img {
+        max-width: 300px;
+        height: auto;
+      }
+      .footer {
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        box-sizing: border-box;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .footer-left {
+        max-width: 500px;
+      }
+
+      .footer-left h4 {
+        font-size: 1.2em;
+        color: #ccc;
+        margin-bottom: 15px;
+        font-weight: normal;
+      }
+
+      .footer-left p {
+        font-size: 1em;
+        line-height: 1.6;
+        color: #ddd;
+      }
+
+      .footer-right {
+        text-align: right;
+      }
+
+      .footer-right h4 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+        color: #ccc;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 15px;
+        font-size: 28px;
+        color: white;
+      }
+
+      .social-icons a {
+        color: white;
+        transition: transform 0.3s;
+      }
+
+      .social-icons a:hover {
+        transform: scale(1.2);
+        color: #ccc;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-top: 60px;
+        font-size: 1em;
+        color: #bbb;
+      }
+    

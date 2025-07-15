@@ -1,0 +1,113 @@
+/*Tipografías*/
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --violeta: rgba(133, 91, 250)
+    --blanco: #fff;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+h1{
+    margin: 0;
+}
+
+.titulo{
+    font-family: "UnifrakturCook";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5rem;
+    background: linear-gradient(60deg, #C3B0A3, #F7D7B0, #FFEBD2, #F7D7B0, #C7A986);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-top: 10rem;
+}
+
+.header-background{
+    background-image: url(img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: aliceblue;
+    height: 500px;
+    padding: 5rem;
+}
+
+ul.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+ul.menu li a {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+ul.menu li a:hover {
+    background-color: rgba(133, 91, 250, 0.4);
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.subtitulo{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 300;
+    margin: 0;
+}
+
+.tuenergia{
+    background-image: url("img/constelacion-2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    margin: 2.5rem;
+    padding: 3rem;
+    border-radius: 15px;
+}
+
+.button-energia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: #9747FF;
+    padding: 0.5rem;
+    height: 20px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.button-energia a{
+    text-decoration: none;
+    color: white;
+}

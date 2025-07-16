@@ -1,0 +1,231 @@
+ /*Tipografías*/
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+ 
+ body {
+    margin: 0;
+
+    }
+.fondo{
+    background-image: url(img/Fondo.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 0 0 3rem 0;
+}
+    .container {
+      width: 100%;
+    
+    }
+
+    ul.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 5rem;
+    color: aliceblue;
+    margin: 0;
+    }
+
+    ul.menu li a {
+        font-family: 'Saira Extra Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: var(--blanco);
+        text-decoration: none;
+        transition: color 0.3s;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    ul.menu li a:hover {
+        background-color: rgba(133, 91, 250, 0.4);
+    }
+
+
+.titulo {
+        text-align: center;
+        font-size: 7rem;
+        font-family: "UnifrakturCook", cursive;
+        font-weight: 700;
+        font-style: normal;
+        background: linear-gradient(60deg, #C3B0A3, #F7D7B0, #FFEBD2, #F7D7B0, #C7A986);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 2rem;
+    }
+
+    .separador{
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .divider {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+
+    .question p {
+      text-align: center;
+      color: #fff;
+      font-family: "Uchen", serif;
+      font-weight: 400;
+    font-size: 3rem;
+    }
+
+    .options-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 1rem;
+     width: 80%;              /* O un valor fijo como 400px */
+     margin: 0 auto;           /* Centrado horizontal */
+     box-sizing: border-box;
+    }
+
+    .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    word-break: break-word;
+    box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+      appearance: none;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    input[type="radio"]:checked {
+      background-color: #d2a4ff;
+      border-color: #d2a4ff;
+    }
+
+    .option label {
+        cursor: pointer;
+        font-family: "Uchen", serif;
+        font-weight: 400;
+        font-size: 2rem;
+        color: white;
+    }
+
+    button {
+      display: block;
+      margin: 10rem auto 0;
+      background-color: #9747FF;
+      color: #F7D7B0;
+      border: none;
+      font-family: "Uchen", serif;
+      font-weight: 400;
+      font-size: 1.6rem;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 15rem;
+    }
+
+    button:hover{
+      background-color: #291236;
+      color: #fff;
+    }
+
+    .result {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #2a194a;
+      color: #fff;
+      border-radius: 10px;
+      border: 1px solid #a177ff;
+      font-size: 1rem;
+      text-align: center;
+      display: none;
+    }
+
+    footer{
+    background-image: url(img/Footer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+    .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem;
+    flex-wrap: wrap;
+    }
+
+    .footer-left {
+    max-width: 50%;
+    }
+
+    .footer-titulo {
+    font-size: 4.5rem;
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
+    background: linear-gradient(60deg, #C3B0A3, #F7D7B0, #FFEBD2, #F7D7B0, #C7A986);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    }
+
+    .footer-texto {
+    font-family: "Uchen", serif;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    }
+
+    .footer-right {
+    text-align: center;
+    }
+
+    .contacto-titulo {
+    font-family: "Uchen", serif;
+    font-size: 2.5rem;
+    color: #FFEBD2;
+    margin-bottom: 1rem;
+    }
+
+    .contacto-icons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    }
+
+    .contacto-icons img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+    }
+
+    .contacto-icons img:hover {
+    transform: scale(1.1);
+    }
+
+    .footer-derechos {
+    text-align: center;
+    font-family: "Uchen", serif;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    }

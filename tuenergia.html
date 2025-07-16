@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Descubre tu energia</title>
+  <link rel="stylesheet" href="tuenergia.css">
+</head>
+<body>
+        <section class="fondo">
+    <nav>
+        <ul class="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Tú Energía</a></li>
+            <li><a href="consejo.html">Consejo</a></li>
+            <li><a href="tusigno.html">Tú Signo</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1 class="titulo">Descubrí tu energía</h1>
+        <div class="separador">
+            <img src="img/separador1.png" alt="" width="90%">
+        </div>
+        
+        <form name="quizForm">
+            <div class="question">
+                <p>¿Cuál es tu característica más poderosa?</p>
+                <div class="options-grid">
+                    <div class="option"><input type="radio" name="q1" id="q1a" value="fuego"><label  for="q1a">Mi pasión y energía</label></div>
+                    <div class="option"><input type="radio" name="q1" id="q1b" value="agua"><label for="q1b">Mi calma y adaptabilidad</label></div>
+                    <div class="option"><input type="radio" name="q1" id="q1c" value="tierra"><label for="q1c">Mi firmeza y constancia</label></div>
+                    <div class="option"><input type="radio" name="q1" id="q1d" value="aire"><label for="q1d">Mi libertad y creatividad</label></div>
+                </div>
+            </div>
+            
+            <div class="divider">
+                <img src="img/separador2.png" alt="">
+            </div>
+            
+            <div class="question">
+                <p>¿Qué paisaje te inspira más?</p>
+                <div class="options-grid">
+                    <div class="option"><input type="radio" name="q2" id="q2a" value="fuego"><label for="q2a">Una fogata iluminando la noche</label></div>
+                    <div class="option"><input type="radio" name="q2" id="q2b" value="agua"><label for="q2b">Un lago sereno bajo la luna</label></div>
+                    <div class="option"><input type="radio" name="q2" id="q2c" value="tierra"><label for="q2c">Un bosque antiguo lleno de secretos</label></div>
+                    <div class="option"><input type="radio" name="q2" id="q2d" value="aire"><label for="q2d">Un acantilado alto donde sopla el viento</label></div>
+                </div>
+            </div>
+            
+            <div class="divider">
+                <img src="img/separador2.png" alt="">
+            </div>
+            
+            <div class="question">
+                <p>¿Cómo enfrentás un problema?</p>
+                <div class="options-grid">
+                    <div class="option"><input type="radio" name="q3" id="q3a" value="tierra"><label for="q3a">Con paciencia y planificación</label></div>
+                    <div class="option"><input type="radio" name="q3" id="q3b" value="aire"><label for="q3b">Con ideas nuevas y enfoques inesperados</label></div>
+                    <div class="option"><input type="radio" name="q3" id="q3c" value="fuego"><label for="q3c">De frente y con intensidad</label></div>
+                    <div class="option"><input type="radio" name="q3" id="q3d" value="agua"><label for="q3d">Buscando fluir y adaptarme</label></div>
+                </div>
+            </div>
+            
+            <div class="divider">
+                <img src="img/separador2.png" alt="">
+            </div>
+            
+            <div class="question">
+                <p>¿Qué tipo de magia preferirías dominar?</p>
+                <div class="options-grid">
+                    <div class="option"><input type="radio" name="q4" id="q4a" value="agua"><label for="q4a">Controlar las aguas y sanar</label></div>
+                    <div class="option"><input type="radio" name="q4" id="q4b" value="aire"><label for="q4b">Manipular el aire y las corrientes</label></div>
+                    <div class="option"><input type="radio" name="q4" id="q4c" value="tierra"><label for="q4c">Canalizar la fuerza de la tierra</label></div>
+                    <div class="option"><input type="radio" name="q4" id="q4d" value="fuego"><label for="q4d">Invocar el poder de las llamas</label></div>
+                </div>
+            </div>
+            
+            <div class="divider">
+                <img src="img/separador2.png" alt="">
+            </div>
+            
+            <div class="question">
+                <p>¿Qué forma tendría tu objeto?</p>
+                <div class="options-grid">
+                    <div class="option"><input type="radio" name="q5" id="q5a" value="aire"><label for="q5a">Una esfera flotante</label></div>
+                    <div class="option"><input type="radio" name="q5" id="q5b" value="fuego"><label for="q5b">Un anillo encantado</label></div>
+                    <div class="option"><input type="radio" name="q5" id="q5c" value="tierra"><label for="q5c">Un bastón antiguo</label></div>
+                    <div class="option"><input type="radio" name="q5" id="q5d" value="agua"><label for="q5d">Un amuleto brillante</label></div>
+                </div>
+            </div>
+            
+            <button type="button" onclick="calcularResultado()">Ver mi resultado</button>
+        </form>
+        
+        <div id="resultado" class="result"></div>
+    </div>
+    
+    
+
+    </section>
+<footer>
+  <div class="footer">
+    <div class="footer-left">
+      <h1 class="footer-titulo">Reliquiae</h1>
+      <p class="footer-texto">
+        Explorá, descubrí y conectá con la magia <br>
+        que vive en vos.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <h3 class="contacto-titulo">Contactanos</h3>
+      <div class="contacto-icons">
+        <img src="img/ig.png" alt="Instagram">
+        <img src="img/mail.png" alt="Email">
+        <img src="img/tiktok.png" alt="TikTok">
+      </div>
+    </div>
+  </div>
+  <div class="footer-derechos">
+    <p>© 2025 Reliquiae · Todos los derechos reservados</p>
+  </div>
+
+</footer>
+
+
+  <script>
+    function calcularResultado() {
+      const form = document.forms['quizForm'];
+      const respuestas = ['q1', 'q2', 'q3', 'q4', 'q5'];
+
+      let conteo = {
+        fuego: 0,
+        agua: 0,
+        tierra: 0,
+        aire: 0
+      };
+
+      for (let r of respuestas) {
+        const seleccionada = form[r].value;
+        if (seleccionada) conteo[seleccionada]++;
+      }
+
+      const mayor = Object.keys(conteo).reduce((a, b) => conteo[a] >= conteo[b] ? a : b);
+
+      const descripciones = {
+        fuego: `<strong>🔥 Energía de Fuego:</strong> Sos pasión pura, chispa creativa y movimiento.`,
+        agua: `<strong>🌊 Energía de Agua:</strong> Sos sensibilidad, intuición y conexión emocional`,
+        tierra: `<strong>🌱 Energía de Tierra:</strong> Sos estabilidad, constancia y sabiduría ancestral.`,
+        aire: `<strong>🌬 Energía de Aire:</strong> Sos libertad, pensamiento y cambio.`
+      };
+
+      const resultado = document.getElementById('resultado');
+      resultado.innerHTML = descripciones[mayor];
+      resultado.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

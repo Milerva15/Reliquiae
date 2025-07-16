@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario Objeto Mágico Elemental</title>
+  <style>
+    body {
+      background: #1b1b1b;
+      color: #eee;
+      font-family: 'Georgia', serif;
+      padding: 20px;
+    }
+    .cuestionario {
+      max-width: 600px;
+      margin: auto;
+      background: #2c2c2c;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #f5a623;
+    }
+    .pregunta {
+      margin-bottom: 20px;
+    }
+    button {
+      background: #f5a623;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #7ed321;
+    }
+  </style>
+</head>
+<body>
+  <div class="cuestionario">
+    <h1>¿Cuál es tu Objeto Mágico Elemental?</h1>
+    <form id="formulario">
+      <div class="pregunta">
+        <p>1️⃣ ¿Cuál es tu fuerza más poderosa?</p>
+        <label><input type="radio" name="p1" value="fuego"> Mi pasión y energía</label><br>
+        <label><input type="radio" name="p1" value="agua"> Mi calma y adaptabilidad</label><br>
+        <label><input type="radio" name="p1" value="tierra"> Mi firmeza y constancia</label><br>
+        <label><input type="radio" name="p1" value="aire"> Mi libertad y creatividad</label>
+      </div>
+      <div class="pregunta">
+        <p>2️⃣ ¿Qué paisaje te inspira más?</p>
+        <label><input type="radio" name="p2" value="fuego"> Un volcán activo iluminando la noche</label><br>
+        <label><input type="radio" name="p2" value="agua"> Un lago sereno bajo la luna</label><br>
+        <label><input type="radio" name="p2" value="tierra"> Un bosque antiguo lleno de secretos</label><br>
+        <label><input type="radio" name="p2" value="aire"> Un acantilado alto donde sopla el viento</label>
+      </div>
+      <div class="pregunta">
+        <p>3️⃣ ¿Cómo enfrentás un problema?</p>
+        <label><input type="radio" name="p3" value="fuego"> De frente y con intensidad</label><br>
+        <label><input type="radio" name="p3" value="agua"> Buscando fluir y adaptarme</label><br>
+        <label><input type="radio" name="p3" value="tierra"> Con paciencia y planificación</label><br>
+        <label><input type="radio" name="p3" value="aire"> Con ideas nuevas y enfoques inesperados</label>
+      </div>
+      <div class="pregunta">
+        <p>4️⃣ ¿Qué tipo de magia preferirías dominar?</p>
+        <label><input type="radio" name="p4" value="fuego"> Invocar el poder de las llamas</label><br>
+        <label><input type="radio" name="p4" value="agua"> Controlar las aguas y sanar</label><br>
+        <label><input type="radio" name="p4" value="tierra"> Canalizar la fuerza de la tierra</label><br>
+        <label><input type="radio" name="p4" value="aire"> Manipular el aire y las corrientes</label>
+      </div>
+      <div class="pregunta">
+        <p>5️⃣ ¿Qué forma tendría tu objeto?</p>
+        <label><input type="radio" name="p5" value="fuego"> Algo ardiente, como una antorcha o piedra ígnea</label><br>
+        <label><input type="radio" name="p5" value="agua"> Algo fluido o esférico, como una gema líquida</label><br>
+        <label><input type="radio" name="p5" value="tierra"> Algo sólido y antiguo, como un bastón o amuleto de piedra</label><br>
+        <label><input type="radio" name="p5" value="aire"> Algo liviano y etéreo, como una pluma o flauta mágica</label>
+      </div>
+      <button type="button" onclick="calcularResultado()">Descubrir mi objeto</button>
+    </form>
+    <div class="resultado" id="resultado"></div>
+  </div>
+
+  <script>
+    function calcularResultado() {
+      const respuestas = [
+        document.querySelector('input[name="p1"]:checked'),
+        document.querySelector('input[name="p2"]:checked'),
+        document.querySelector('input[name="p3"]:checked'),
+        document.querySelector('input[name="p4"]:checked'),
+        document.querySelector('input[name="p5"]:checked')
+      ];
+
+      if (respuestas.includes(null)) {
+        document.getElementById('resultado').textContent = 'Por favor, respondé todas las preguntas.';
+        return;
+      }
+
+      let conteo = { fuego: 0, agua: 0, tierra: 0, aire: 0 };
+
+      respuestas.forEach(r => {
+        conteo[r.value]++;
+      });
+
+      let elemento = Object.keys(conteo).reduce((a, b) => conteo[a] > conteo[b] ? a : b);
+
+      let objeto = {
+        fuego: 'Piedra de las Llamas Eternas',
+        agua: 'Amuleto de las Mareas',
+        tierra: 'Bastón del Roble Antiguo',
+        aire: 'Flauta del Viento'
+      };
+
+      document.getElementById('resultado').textContent = `Tu objeto mágico ideal es: ${objeto[elemento]} (${elemento.toUpperCase()})`;
+    }
+  </script>
+</body>
+</html>

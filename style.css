@@ -1,16 +1,20 @@
 /*Tipografías*/
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
 
 :root{
-    --violeta: rgba(133, 91, 250)
-    --blanco: #fff;
+    --violeta: rgba(133, 91, 250);
+    --blanco: #ffffff;
+    --violeta2: #9747FF;
+    --violetaoscuro: #291236;
+    --dorado: #F7D7B0;
 }
 
 body{
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #929292;
 }
 
 h1{
@@ -21,13 +25,13 @@ h1{
     font-family: "UnifrakturCook";
     font-weight: 700;
     font-style: normal;
-    font-size: 5rem;
+    font-size: 10rem;
     background: linear-gradient(60deg, #C3B0A3, #F7D7B0, #FFEBD2, #F7D7B0, #C7A986);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    margin-top: 10rem;
+    margin-top: 6rem;
 }
 
 .header-background{
@@ -53,7 +57,7 @@ ul.menu li a {
     font-weight: 400;
     font-size: 20px;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--blanco);
     text-decoration: none;
     transition: color 0.3s;
     padding: 1rem;
@@ -82,32 +86,231 @@ main {
     margin: 0;
 }
 
+/*TARJETAS*/
+.cuerpo-tag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag{
+    display: flex;
+    flex-direction: row;
+    color: var(--blanco);
+    margin: 2.5rem;
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    height: 45rem;
+    width: 85%;
+}
+
+.tag-cartas{
+    display: flex;
+    flex-direction: row;
+}
+
+.tag-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tag-img img{
+    margin: 0 3rem;
+}
+
+.cristal img{
+    height: 30rem;
+}
+
+
+.carta img{
+    height: 25rem;
+    border-radius: 20px;
+}
+
+.rueda img{
+    height: 30rem;
+}
+
 .tuenergia{
     background-image: url("img/constelacion-2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
-    margin: 2.5rem;
-    padding: 3rem;
-    border-radius: 15px;
 }
 
-.button-energia{
+.consejo{
+    background-color: #0D0624;
+}
+
+.tusigno{
+    background-image: url("img/constelacion-2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tag-cartas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    padding: 2rem 0;
+}
+
+/* ANIMACIÓN DE ROTACIÓN */
+@keyframes girar {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.carta img {
+    height: 25rem;
+    border-radius: 20px;
+    animation: girar 8s linear infinite;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+/*TARJETAS TEXTOS*/
+.tag-texto{
+    width: 80%;
+}
+.titulo-tag{
+    font-family: "UnifrakturCook";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 7rem;
+    padding: 0;
+    margin: 5px;
+}
+
+.elemento{
+    font-family: "Uchen", serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0%;
+    font-size: 1.8rem;
+}
+
+.cta{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 300;
+    padding: 0;
+    font-size: 2rem;
+}
+
+/*BOTONES*/
+.button{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: rgb(255, 255, 255);
-    background-color: #9747FF;
+    background-color: var(--violeta2);
+    margin: 3rem;
     padding: 0.5rem;
-    height: 20px;
-    width: 150px;
+    height: 2rem;
+    width: 15rem;
     border-radius: 10px;
 }
 
-.button-energia a{
+.button-text{
     text-decoration: none;
-    color: white;
+    color: var(--blanco);
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
 }
+
+.button:hover{
+    background-color: var(--violetaoscuro);
+}
+.button-text:hover{
+    color: var(--dorado);
+}
+
+
+    footer{
+    background-image: url(img/Footer.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+    .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem;
+    flex-wrap: wrap;
+    }
+
+    .footer-left {
+    max-width: 50%;
+    }
+
+    .footer-titulo {
+    font-size: 4.5rem;
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
+    background: linear-gradient(60deg, #C3B0A3, #F7D7B0, #FFEBD2, #F7D7B0, #C7A986);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    }
+
+    .footer-texto {
+    font-family: "Uchen", serif;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    }
+
+    .footer-right {
+    text-align: center;
+    }
+
+    .contacto-titulo {
+    font-family: "Uchen", serif;
+    font-size: 2.5rem;
+    color: #FFEBD2;
+    margin-bottom: 1rem;
+    }
+
+    .contacto-icons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    }
+
+    .contacto-icons img {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+    }
+
+    .contacto-icons img:hover {
+    transform: scale(1.1);
+    }
+
+    .footer-derechos {
+    text-align: center;
+    font-family: "Uchen", serif;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    }

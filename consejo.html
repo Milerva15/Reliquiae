@@ -1,43 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Imagen y Texto Aleatorio</title>
-  <link rel="stylesheet" href="concejo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22 Cartas del Tarot en Grid</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="concejo.css">
 </head>
 <body>
-  <div class="contenedor">
-    <img id="imagenAleatoria" src="" alt="Imagen aleatoria">
-    <p id="textoAleatorio"></p>
-  </div>
-
-<script>
-    const elementos = [
-  {
-    imagen: "img/imagen1.jpg",
-    texto: "Cada día es una nueva oportunidad"
-  },
-  {
-    imagen: "img/imagen2.jpg",
-    texto: "La belleza está en los pequeños detalles"
-  },
-  {
-    imagen: "img/imagen3.jpg",
-    texto: "El universo conspira a tu favor"
-  },
-  {
-    imagen: "img/imagen4.jpg",
-    texto: "Confía en tu proceso"
-  }
-];
-
-// Elegir un elemento aleatorio
-const aleatorio = elementos[Math.floor(Math.random() * elementos.length)];
-
-// Asignar imagen y texto
-document.getElementById("imagenAleatoria").src = aleatorio.imagen;
-document.getElementById("textoAleatorio").textContent = aleatorio.texto;
-  </script>
+    
+    
+        <!-- Botón de Reinicio (se muestra solo al seleccionar una carta) -->
+        <button id="reset-button" onclick="location.reload()">Volver a Inicio</button>
+        
+        <!-- Las cartas se generarán dinámicamente aquí mediante JavaScript -->
+        
+        <!-- Enlace al archivo JavaScript (al final del body es mejor para la carga) -->
+        <script src="consejo.js"></script>
+     
 </body>
 </html>

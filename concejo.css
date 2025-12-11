@@ -1,22 +1,44 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap;   /* 👈 Permite que pase a otra fila */
+    flex-wrap: wrap;
     gap: 0;
     margin: 40px;
     padding-left: 106px;
-    overflow-y: auto;  /* 👈 Si algo se desborda, agrega scroll vertical */
-    background-color: #592677;
-
-      background-image:
-        radial-gradient(circle at 20% 30%, rgba(255,215,0,0.6) 2px, transparent 3px),
-        radial-gradient(circle at 80% 70%, rgba(255,215,0,0.4) 2px, transparent 3px),
-        radial-gradient(circle at 50% 50%, rgba(255,215,0,0.3) 3px, transparent 4px),
-        radial-gradient(circle at 10% 80%, rgba(255,215,0,0.5) 1.5px, transparent 3px),
-        radial-gradient(circle at 90% 20%, rgba(255,215,0,0.4) 2.5px, transparent 4px);
-    background-size: 500px 500px;
+    overflow-y: auto;
+    background-image:url(img/Fondo2.jpg);
 }
+
+
+ul.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 5rem;
+    color: aliceblue;
+    margin: 0;
+    }
+
+ul.menu li a {
+        font-family: 'Saira Extra Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: var(--blanco);
+        text-decoration: none;
+        transition: color 0.3s;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+ul.menu li a:hover {
+        background-color: rgba(133, 91, 250, 0.4);
+    }
+
 
 
 body.card-selected {
@@ -79,7 +101,7 @@ body.card-selected {
 /* ------------------------------------------- */
 
 .back {
-    background-color: #e74c3c; 
+
     background-size: contain; 
     background-position: center;
     background-repeat: no-repeat;

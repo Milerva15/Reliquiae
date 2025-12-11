@@ -8,39 +8,41 @@
 
 body {
   height: 100vh;
-  background: radial-gradient(circle at top, #1b0f2e, #07020d 70%);
-  background-image:
-    radial-gradient(circle, rgba(255,215,150,0.15) 1px, transparent 1px),
-    radial-gradient(circle, rgba(255,215,150,0.08) 1px, transparent 1px);
-  background-size: 80px 80px, 140px 140px;
-  background-position: 0 0, 40px 40px;
-  font-family: 'Montserrat', sans-serif;
-  color: #ffffff;
+  background-image:url(../img/Fondo2.jpg) ;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* FLECHA VOLVER */
-.back {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-  opacity: 0.9;
-}
 
-/* LOGO */
-.logo {
-  position: absolute;
-  top: 40px;
-  font-family: 'Cinzel', serif;
-  font-size: 36px;
-  letter-spacing: 2px;
-  color: #f3e6c9;
-}
+ul.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 5rem;
+    color: aliceblue;
+    margin: 0;
+    }
+
+ul.menu li a {
+        font-family: 'Saira Extra Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: var(--blanco);
+        text-decoration: none;
+        transition: color 0.3s;
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+ul.menu li a:hover {
+        background-color: rgba(133, 91, 250, 0.4);
+    }
+
 
 /* CARD PRINCIPAL */
 .container {

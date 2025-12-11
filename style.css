@@ -98,7 +98,6 @@ align-items: center;
 }
 
 .tag{
-
 display: flex;
 flex-direction: column; 
 color: var(--blanco);
@@ -130,6 +129,7 @@ margin: 0 1rem;
 
 .cristal img{
 height: 30rem;
+margin: 0 14rem; 
 }
 
 .carta img{
@@ -155,20 +155,19 @@ background-image: url("img/Frame 3.png");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-/* Ajuste de min-height para que la tarjeta sea más compacta */
 min-height: 45rem; 
 }
 
 .tusigno{
-display: flex; /* Asegura que 'tusigno' siga siendo fila */
-flex-direction: row; /* Asegura que 'tusigno' siga siendo fila */
+display: flex;
+flex-direction: row;
 background-image: url("img/constelacion-2.png");
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 }
 
-/* Ajustes al contenedor de cartas que ya habías hecho */
+
 .tag-cartas {
 display: flex;
 justify-content: center;
@@ -199,26 +198,21 @@ transform-style: preserve-3d;
 
 /*TARJETAS TEXTOS*/
 .tag-texto{
-/* Para el estilo deseado, el texto debe ocupar todo el ancho superior */
-width: 100%; 
-/* Añadimos padding inferior para separar el texto de las cartas */
+width: 90%; 
 padding-bottom: 2rem; 
-/* Añadimos alineación para el texto dentro del contenedor */
 text-align: left;
 }
 
-/* Alineamos el título a la izquierda, como en la imagen de ejemplo */
+
 .titulo-tag{
 font-family: "UnifrakturCook";
 font-weight: 700;
 font-style: normal;
 font-size: 5rem; 
 padding: 0;
-/* CORRECCIÓN: margen izquierdo para que el título no esté pegado al borde */
-margin: 5px 0 5px 0; 
+margin: 2rem 0 50px 0; 
 }
 
-/* El texto debe estar alineado a la izquierda */
 .elemento{
 font-family: "Uchen", serif;
 font-weight: 400;
@@ -227,7 +221,7 @@ margin: 0%;
 font-size: 1.8rem;
 text-align: left;
 }
-/* El CTA también debe estar alineado a la izquierda */
+
 .cta{
 font-family: 'Saira Extra Condensed', sans-serif;
 font-weight: 300;
@@ -236,37 +230,38 @@ font-size: 2rem;
 text-align: left;
 }
 
-/*BOTONES*/
 .button{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-background-color: var(--violeta2);
-/* Quitamos el margin left y right para que quede centrado en el tag */
-margin: 3rem auto; 
-padding: 0.5rem;
-height: 2rem;
-width: 15rem;
-border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--violeta2);
+  margin: 3rem;
+  padding: 0.5rem;
+  height: 2rem;
+  width: 15rem;
+  border-radius: 10px;
 }
 
 .button-text{
-text-decoration: none;
-color: var(--blanco);
-font-family: 'Saira Extra Condensed', sans-serif;
-font-weight: 300;
-font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--blanco);
+  font-family: 'Saira Extra Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
 }
 
 .button:hover{
-background-color: var(--violetaoscuro);
+  background-color: var(--violetaoscuro);
 }
 .button-text:hover{
-color: var(--dorado);
+  color: var(--dorado);
 }
 
+.center{
+      margin: 3rem auto;
+}
 
 footer{
 background-image: url(img/Footer.jpg);

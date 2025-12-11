@@ -25,9 +25,7 @@
         /* --- Estilos del Menú de Navegación (NAV) --- */
         nav {
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            margin-bottom: 30px; 
+            margin: 50px 0 50px 0; 
         }
 
         ul.menu {
@@ -56,43 +54,66 @@
         }
 
         /* --- Contenedor de Cartas --- */
-        #cards-grid {
-            display: flex;
-            flex-wrap: wrap; 
-            justify-content: center;
-            /* Calculamos el ancho para 11 cartas más su superposición */
-            width: calc(11 * var(--ancho-carta) + 10 * var(--superposicion) + 50px); 
-            margin: 20px auto;
-            perspective: 1000px;
-            transition: opacity 0.5s;
-        }
+      #cards-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    /*
+     * CÁLCULO CLAVE: Ancho para 11 cartas más su superposición.
+     * 11 * ancho de carta + 10 * superposición (hay 10 solapamientos)
+     * No necesitamos el + 50px de antes, ajustamos el ancho exacto.
+     */
+    width: calc(11 * var(--ancho-carta) + 10 * var(--superposicion)); 
+    margin: 20px auto;
+    perspective: 1000px;
+    transition: opacity 0.5s;
+}
 
-        /* Contenedor de la Carta Individual */
-        .card-container {
-            width: var(--ancho-carta);
-            height: var(--alto-carta);
-            position: relative;
-            cursor: pointer;
-            /* Aplicamos la superposición y el margen vertical */
-            margin: var(--espacio-carta) 0 0 var(--superposicion); 
-            transition: opacity 0.5s ease-out, transform 1s ease-out; 
-            transform-style: preserve-3d;
-        }
-        
+  .card-container {
+    width: var(--ancho-carta);
+    height: var(--alto-carta);
+    position: relative;
+    cursor: pointer;
+    /*
+     * La superposición horizontal se mantiene: var(--superposicion)
+     * Para que se acomoden en 2 filas, solo aplicamos el margen/solapamiento horizontal.
+     */
+    margin: var(--espacio-carta) 0 0 var(--superposicion); 
+    transition: opacity 0.5s ease-out, transform 1s ease-out; 
+    transform-style: preserve-3d;
+}
         /* La primera carta en cada fila no debe solaparse con nada a su izquierda */
-        #cards-grid :nth-child(1),
-        #cards-grid :nth-child(12) { /* 12 es la primera carta de la segunda fila (11 + 1) */
-            margin-left: 0;
-        }
+#cards-grid :nth-child(1),
+#cards-grid :nth-child(12) { /* 12 es la primera carta de la segunda fila (11 + 1) */
+    margin-left: 0; /* Se mantiene igual, es correcto */
+}
 
+#content-container {
+    display: flex;
+    flex-direction: column; /* Por defecto, el botón y las cartas van en columna */
+    align-items: center;
+    width: 100%;
+}
 
-        /* Animación y Ocultamiento de Cartas no seleccionadas */
-        .card-container.hidden {
-            opacity: 0;
-            transform: translateY(100vh) scale(0.5);
-            pointer-events: none;
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
+/* ESTADO CARTA SELECCIONADA Y MOVIMIENTO LATERAL */
+b/* --- ESTADO CARTA SELECCIONADA Y MOVIMIENTO LATERAL --- */
+body.card-selected #content-container {
+    align-items: flex-start;
+    flex-direction: row; 
+    justify-content: flex-start;
+    padding: 0 50px; 
+    gap: 50px;
+    width: auto;
+    /* Ajuste: Aseguramos que el contenido empiece debajo del NAV fijo */
+    margin-top: 50px; 
+}
+
+/* Oculta el grid principal (contenedor de las 22 cartas) */
+#cards-grid.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s; /* Agregamos la transición aquí */
+}
 
         .card {
             width: 100%;
@@ -180,42 +201,60 @@
 
 
         /* Estilo para la CARTA SELECCIONADA (una vez que las otras se han ido) */
-        .card-container.selected-solo {
-            position: relative;
-            z-index: 20;
-            /* Mueve a la izquierda y escala */
-            transform: scale(1.3) translateX(-20%); 
-            transition: transform 1s ease-in-out; 
-            margin: 0; 
-        }
-        
+       /* Estilo para la CARTA SELECCIONADA (una vez que las otras se han ido) */
+.card-container.selected-solo {
+    /* Quitamos el transform de escala y traslación para simplificar la posición */
+    transform: none; 
+    transition: transform 1s ease-in-out; 
+    
+    /* Le damos un tamaño mayor al ser la única */
+    width: 200px; /* Tamaño de carta más grande */
+    height: 330px; 
+    
+    /* Reseteamos los márgenes de superposición */
+    margin: 0; 
+    
+    /* Aseguramos que mantenga su z-index */
+    z-index: 20; 
+}
+
+/* Opcional: Centrar la carta y el consejo en el viewport si lo prefieres */
+/*
+body.card-selected #content-container {
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+}
+*/
         /* Contenedor de Texto de Resultado (Tarjeta) */
-        #result-content {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: opacity 1s ease-in, transform 1s ease-in;
-            max-width: 500px;
-            padding: 30px;
-            border-radius: 15px;
-            background-color: var(--color-tarjeta); /* Fondo de tarjeta semi-transparente */
-            backdrop-filter: blur(5px); /* Efecto cristal (opcional) */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+      /* Contenedor de Texto de Resultado (Tarjeta/Tag) */
+#result-content {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
+    
+    /* Estilos para que luzca como en tu imagen */
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(30, 0, 50, 0.8); /* Fondo más oscuro y sólido que tu original */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #9951d4; /* Borde sutil del color morado */
+}
 
-        body.card-selected #result-content {
-            opacity: 1;
-            transform: translateX(0);
-        }
+/* Hacemos visible el resultado al seleccionar la carta */
+body.card-selected #result-content {
+    opacity: 1;
+    transform: translateX(0);
+}
 
-        #result-content h2 {
-            font-size: 2.5rem;
-            color: #9951d4;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #9951d4;
-            padding-bottom: 10px;
-        }
-
+#result-content h2 {
+    font-size: 2.5rem;
+    color: var(--blanco); /* Hacemos el título blanco */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #9951d4; /* Mantemos la línea morada */
+    padding-bottom: 10px;
+}
         #result-content p {
             font-size: 1.2rem;
             line-height: 1.5;
